@@ -1,0 +1,23 @@
+# LOVE CALCULAOTR
+print("WELCOME TO THE LOVE CALCULATOR")
+your_name = input("enter your name\n")
+her_name = input("enter him/her name\n")
+
+#count() = it function will give you the no. of time letter occur in string
+#lower() = this function will change all alphabet in lower case
+name = your_name + her_name
+print(f"{name}")
+combine_name = name.lower()
+
+t = combine_name.count("t")
+r = combine_name.count("r")
+u = combine_name.count("u")
+e = combine_name.count("e")
+true = t+r+u+e
+
+l = combine_name.count("l")
+o = combine_name.count("o")
+v = combine_name.count("v")
+e = combine_name.count("e")
+love = l+o+v+e
+print(f"{true}" + f"{love}%")

@@ -1,0 +1,20 @@
+# tresure opening game
+print("WELCOME TO TRESURE ISLAND YOUR MISSION IS TO FIND TRESURE")
+
+#.lower() = it make alphabet in small letter
+dirn = input('"left" or "right "\n').lower()
+if dirn == "right" :
+  print("you fall into hole GAME OVER \n")
+else :
+ dirn2 = input('"swim" or "wait"\n').lower()
+
+if dirn2 == "swim":
+  print("GAME OVER\n")
+else :
+  dirn3 = input('Which door "red" or "blue" or "yellow" \n').lower()
+
+if dirn3 == "yellow":
+  print("YOU WIN \n")
+
+else:
+  print("GAME OVER \n")

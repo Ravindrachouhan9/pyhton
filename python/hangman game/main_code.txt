@@ -1,0 +1,58 @@
+#hangman game (guess the word)
+
+import random
+
+# randomly select the word from word list 
+from words import word_list
+from art import logo
+print (logo)
+word = random.choice(word_list)
+
+#for testing code
+print(f"{word}")
+
+word_len = len(word)
+end_of_game = False
+lives = 6
+
+# Create blanks according to word length
+display = []
+for _ in range(word_len) :
+  display += "_"
+print(f"{' '.join(display)}\n")
+  
+while not end_of_game :
+  guess = input("guess the letter : ").lower()
+  if guess in display :
+    print(f"you already guyess the letter {guess}")
+
+  for position in range(word_len) :
+    letter = word[position]
+    if letter == guess :
+      display[position] = letter
+  print(f"{' '.join(display)}")
+
+  if guess not in word :
+       print(f"you guessed {guess} wrong letter you lose a life")
+       print(f"{' '.join(display)}")
+       lives -= 1
+       if lives == 0:
+        end_of_game = True
+        print("GAME OVER")
+        
+    #Join all the elements in the list and turn it into a String.
+        print(f"{' '.join(display)}")
+  if "_" not in display :
+    end_of_game =  True
+    print("YOU WIN")
+
+  from art import stages
+  print(stages[lives])
+    
+        
+      
+      
+
+  
+    
+  

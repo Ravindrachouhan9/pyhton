@@ -1,0 +1,26 @@
+#Stone paper secissor GAME
+
+import random
+
+#game_images = [stone, paper, scissor]
+User_choice = int(input("what you choose \n 0 = stone \n 1 = paper \n 2 = scissor \n"))
+#print(game_image[User_choice])
+computer_choice = random.randint(0, 2)
+#print(game_images[computer_choice])
+print(f"computer choose {computer_choice}")
+
+if User_choice > 2 :
+  print("you enter a invalid number")
+elif computer_choice == 0 and User_choice == 2:
+  print("YOU WIN")
+
+elif User_choice == 0 and computer_choice == 1 :
+  print("YOU LOSE")
+elif User_choice > computer_choice :
+  print("YOU WON")
+elif computer_choice > User_choice :
+  print("YOU LOSE")
+elif computer_choice == User_choice :
+  print("DRAW")
+
+

@@ -1,0 +1,13 @@
+print("welcome to the tip calculator")
+bill = float(input ("what is your total bill"))
+tip_percent = int(input("what percent tip would you like to give"))
+no_of_people = int(input("how many people to split"))
+
+percent = tip_percent/100 * bill
+bill_amount = bill + percent
+people = bill_amount/no_of_people
+#round(number) - amke the float value approx nearby value
+round(people, 2)
+
+# f string - use to add value into the string
+print (f"each person should pay {people}")

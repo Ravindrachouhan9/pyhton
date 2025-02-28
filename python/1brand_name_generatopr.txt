@@ -1,0 +1,5 @@
+print("welcome to brand name generator")
+pet_name = input("whats your pet name\n")
+your_name = input("whats your name\n")
+print ("your brand name is ")
+print(pet_name  +  " " + your_name)

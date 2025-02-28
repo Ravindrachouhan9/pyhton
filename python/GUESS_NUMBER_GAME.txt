@@ -1,0 +1,42 @@
+"""GUESS NUMBER GAME"""
+from random import randint  
+
+EASY = 10
+HARD = 5
+
+def set_level ():
+  level = input("select the level 'easy' or 'hard' : ").lower()
+  if level == "easy" : 
+     return EASY
+  elif level == "hard" :
+    return HARD
+
+def check_answer(answer,guess,turn):
+  if answer > guess: 
+    print("you guess too low number")
+    return turn - 1
+  elif answer < guess:
+    print("you guess too high number")
+    return turn - 1
+  else :
+    print(f"You got it! The answer was {answer}.")
+
+
+print("welcome to guess Number Game")
+print("I am thinking number is in between 1 to 100")
+answer = randint(1,100)
+#print(answer)
+turn = set_level()
+guess = 0 
+while guess != answer :
+  print(f"You have {turn} attempts remaining to guess the number.") 
+  guess = int(input("Make a guess: "))
+  turn = check_answer(answer , guess , turn)
+  if turn == 0 :
+   print("you loose the game")
+   break ;
+  elif answer!= guess :
+   print("guess again")
+
+  
+
